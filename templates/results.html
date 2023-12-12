@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/results.css" type="text/css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2>FINAL RESULTS</h2>
+    <!-- {% if marks < 50 %}
+    <h3>FAIL</h3>
+    {% else %}
+    <h3>PASS</h3>
+    {% endif %} -->
+    <p>{{result}}</p>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        {% for key, value in all_marks.items() %}
+            <tr>
+                <td>{{key}}</td>
+                <td>{{value}}</td>
+
+            </tr>
+        {% endfor %}
+        
+    </table>
+    <p>AVREAGE := {{marks}}</p>
+</body>
+</html>
